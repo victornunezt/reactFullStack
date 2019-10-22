@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View, TextInput} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button} from 'react-native';
 
 
 export default class helloWorld extends Component {
@@ -17,6 +17,7 @@ export default class helloWorld extends Component {
   //}
   onPressTitle = () => alert('Éste es un mensaje de alerta')
   textUser = (text) => this.setState({text})
+  pressButton = () => alert('Has apretado el botón')
 
   render(){
     return (
@@ -34,9 +35,10 @@ export default class helloWorld extends Component {
         </View>
         <View style = {styles.squareTwo}>
           <TextInput placeholder = "Escribe aquí" onChangeText={this.textUser} value = {this.state.text}></TextInput>
+          <Text>{this.state.text}</Text>
         </View>
         <View style = {styles.squareThree}>
-          <Text>{this.state.text}</Text>
+          <Button onPress = {this.pressButton} title= "Apreta el botón"></Button>
         </View>
       </View>
     );
