@@ -1,5 +1,5 @@
-###Test1
+###Dishes App (React Native)
 
-#App.js
+This repository provides some files and javascript code to run a database of dishes in React Native
 
-This file contains information about how the application works
+
